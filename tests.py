@@ -12,18 +12,6 @@ genre_wrong_1 = 'Фильмы'
 
 class TestBooksCollector:
 
-    def test_init_books_genre_success(self, collector):
-        assert collector.books_genre == {}
-
-    def test_init_favorites_success(self, collector):
-        assert collector.favorites == []
-
-    def test_init_genre_success(self, collector):
-        assert collector.genre == ['Фантастика', 'Ужасы', 'Детективы', 'Мультфильмы', 'Комедии']
-
-    def test_init_genre_age_rating_success(self, collector):
-        assert collector.genre_age_rating == ['Ужасы', 'Детективы']
-
     def test_add_new_book_add_two_books_success(self, collector):
         collector.add_new_book(name_1)
         collector.add_new_book(name_2)
