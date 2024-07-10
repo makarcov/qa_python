@@ -24,7 +24,7 @@ class TestBooksCollector:
     def test_add_new_book_add_books_with_same_names_failed(self, collector):
         collector.add_new_book(name_1)
         collector.add_new_book(name_1)
-        assert not len(collector.books_genre) == 2
+        assert len(collector.books_genre) == 1
 
     @pytest.mark.parametrize('name_wrong', name_wrong_list)
     def test_add_new_book_add_book_with_incorrect_name_failed(self, collector, name_wrong):
